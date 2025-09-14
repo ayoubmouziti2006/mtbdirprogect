@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MTBdir</title>
+  <link rel="icon" type="image/png" href="e4b6cf41-07b9-492f-98de-72266f181df5.png">
+</head>
+<style>
+    
+
+nav{
+    height: 75px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    
+    width: 100%;
+}
+
+#logo{
+    color: white;
+}
+li{
+    float: left;
+    padding: 10px;
+    list-style: none;
+    font-size:x-large;
+}
+
+ul{
+    margin-right: 2em;
+}
+
+li a{
+    text-decoration-line: none;
+    background-color: white;
+    border-radius: 20%;
+    
+}
+nav h1 {
+    margin-left: 2em;
+    font-size: 2,5em;
+}
+nav a:hover{
+    background-color:rgb(144, 133, 200);
+    text-decoration: underline;
+    border-radius: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+   background-image: url(2b51836b-58f7-4e00-b1e8-5140541f1055.png);
+    background-attachment: fixed;
+    background-size: cover;     
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 600px;
+}
+/*
+header {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+*/
+.shop {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 30px;
+}
+
+.product {
+    background: rgba(255, 255, 255, 0.7); 
+
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 15px;
+  text-align: center;
+}
+.product:hover {
+  transform: scale(1.05); 
+}
+
+.product img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.product h2 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.product p {
+  color: #3d3c3c;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.product span {
+  display: block;
+  font-weight: bold;
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px;
+  background: #0073e6;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+ 
+}
+
+button:hover {
+  background: #005bb5;
+}
+
+</style>
+<body>
+    <nav>
+            <h1 id="logo">
+                <img src="m logo.png" alt="MTBdir logo" style="height:40px; vertical-align: middle; margin-right:8px;">
+                MTBdir
+            </h1>
+            <ul>
+                <li><a href="index.html">accueil</a></li>
+                <li><a href="shop.html">shop</a></li>
+                <li><a href="contact.html">contact</a></li>
+                <li><a href="àpropos.html">à propos</a></li>
+            </ul>
+    </nav>
+        <main class="shop">
+            <div class="product" id="ROCKRIDER">
+                <img src="img2.avif" alt="Produit 1">
+                <h2>ROCKRIDER XC 900</h2>
+                <p>Performez avec son cadre rigide.</p>
+                <span>9000 Dhs</span>
+                <button>Ajouter au panier</button>
+            </div>
+
+            <div class="product" id="Trek">
+                <img src="img1.jpg" alt="Produit 2">
+                <h2>Trek Supercaliber 9.9 AXS</h2>
+                <p>Idéal pour les compétitions.</p>
+                <span>22000 Dhs</span>
+                <button>Ajouter au panier</button>
+            </div>
+
+            <div class="product">
+                <img src="img3.jpg" alt="Produit 3">
+                <h2>Casque Pro</h2>
+                <p>Sécurité et confort garantis.</p>
+                <span>1250 Dhs</span>
+                <button>Ajouter au panier</button>
+            </div>
+
+            <div class="product" >
+                <img src="img4.avif" alt="Produit 4">
+                <h2>Roues 29 pouces carbone</h2>
+                <p>Roues XC performantes-1420 grammes.</p>
+                <span>2500 Dhs</span>
+                <button>Ajouter au panier</button>
+            </div>
+
+            <div class="product">
+                <img src="img5.jpg" alt="Produit 5">
+                <h2>CHAUSSURES VTT SCOTT </h2>
+                <p>Confort et adhérence maximale, taiile 42</p>
+                <span>1200 Dhs</span>
+                <button>Ajouter au panier</button>
+            </div>
+
+            <div class="product">
+                <img src="img6.jpg" alt="Produit 6">
+                <h2>Lunettes de protection</h2>
+                <p>Vision claire en toute situation.</p>
+                <span>350 Dhs</span>
+                <button>Ajouter au panier</button>
+            </div>
+            <div class="product">
+                <img src="img7.jpg" alt="Produit 4">
+                <h2>Gants MTB</h2>
+                <p>Protection optimale pour vos mains.</p>
+                <span>175 Dhs</span>
+                <button>Ajouter au panier</button>
+            </div>
+            <div class="product">
+                <img src="img8 (2).jpg" alt="Produit 4">
+                <h2>Groupe Shimano XTR M9100</h2>
+                <p>XTR M9100 1x12V (sans freins)</p>
+                <span>1999 Dhs</span>
+                <button>Ajouter au panier</button>
+            </div>
+        </main>
+    <script>
+      let img = document.querySelector("#ROCKRIDER img"); 
+      let pics = ["img2.avif", "image22.png", "image222.png"];
+      let i = 0;
+      setInterval(function() {
+            i++;                          
+            if(i >= pics.length) i = 0;     
+            img.src = pics[i];           
+            }, 3000); 
+      
+         let img2 = document.querySelector("#Trek img"); 
+      let pics2 = ["img1.jpg", "image11.png", "image111.png"];
+      let j = 0;
+      setInterval(function() {
+            j++;                          
+            if(j >= pics2.length) j = 0;     
+            img2.src = pics2[j];           
+            }, 3000); 
+
+    </script>
+</body>
+</html>

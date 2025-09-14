@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <title>MTBdir</title>
+  <link rel="icon" type="image/png" href="e4b6cf41-07b9-492f-98de-72266f181df5.png">
+</head>
+<style>
+    nav{
+    height: 75px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo{
+    color: white;
+}
+li{
+    float: left;
+    padding: 10px;
+    list-style: none;
+    font-size:x-large;
+}
+
+ul{
+    margin-right: 2em;
+}
+
+li a{
+    text-decoration-line: none;
+    background-color: white;
+    border-radius: 20%;
+    
+}
+nav h1 {
+    margin-left: 2em;
+    font-size: 2,5em;
+}
+nav a:hover{
+    background-color:rgb(144, 133, 200);
+    text-decoration: underline;
+    border-radius: 100%;
+}
+
+body {
+    /*background-image: url(2b51836b-58f7-4e00-b1e8-5140541f1055.png);
+    background-attachment: fixed;
+    background-size: cover;     
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 600px;*/
+    background-color:#d1cece;
+    margin: 0; 
+    display: flex;
+    flex-direction: column;
+    
+ 
+}
+
+
+
+
+
+.container {
+  display: flex;
+  justify-content: center;   /* يوسّط المحتوى أفقيا */
+  align-items: flex-start;   /* يوسّط عموديا */
+  /**/gap: 40px;                 /* المسافة بين الفورم والمعلومات */
+  margin: 50px auto;
+  padding: 20px;
+  max-width: 1000px;         /* عرض أقصى */
+  
+}
+
+/* ستايل للمعلومات */
+.contact-info {
+ /* background: rgba(255,255,255,0.9);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);*/
+  flex: 1;
+  max-width: 400px;
+  height: 300px;
+ 
+}
+
+.contact-info h2 {
+  margin-top: 40px;
+  color: #333;
+}
+.contact-info p{
+  font-size:1.5em;
+}
+
+/* الفورم */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/*
+
+body main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 9%;
+}
+*/
+form {
+    
+  background: rgba(255, 255, 255, 0.85); 
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  height: 400px;
+}
+
+label {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Champs de saisie */
+input, textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+span{
+  color: red;
+}
+button {
+  background: #0073e6;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  margin-top: 10%;
+}
+
+button:hover {
+  background: #005bb5;
+  transform: scale(1.05); 
+}
+
+
+</style>
+<body>
+    <nav>
+        <h1 id="logo">
+            <img src="m logo.png" alt="MTBdir logo" style="height:40px; vertical-align: middle; margin-right:8px;">
+            MTBdir
+        </h1>
+        <ul>
+            <li><a href="index.html">accueil</a></li>
+            <li><a href="shop.html">shop</a></li>
+            <li><a href="contact.html">contact</a></li>
+            <li><a href="àpropos.html">à propos</a></li>
+        </ul>
+    </nav>
+
+
+
+    <div class="container">
+
+    <!-- info social-->
+    <div class="contact-info">
+      <h1>siège social</h1>
+      <p>📍   Av. Laayoune, B.P 1317<br>80000,  Agadir , Maroc</p>
+      <p>📧 mtbagadir2025@gmail.com</p>
+      <p>📞 0604898311</p>
+      <p>🕒 Du lundi au samedi: 9:00am - 6:00pm</p>
+    </div>
+
+
+  <main>
+    <form id="myForm" action="traitement.php" method="POST" >
+      <h2>Contactez-nous</h2>
+      <label for="name">Nom:</label>
+      <input type="text" id="name" name="name" required>
+      <span></span>
+
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <span></span>
+
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+      <span></span>
+      <button type="submit" name="submit">Envoyer</button>
+      
+    </form>
+      
+  </main>  
+   <script>
+  const form = document.getElementById('myForm');
+  const inputs = form.querySelectorAll('input, textarea');
+  form.addEventListener("submit", verifecation);
+
+  function verifecation(e) {
+    e.preventDefault(); 
+    let valid = true;   
+    inputs.forEach((input) => {
+      if (input.value.trim() === "") {
+        input.nextElementSibling.textContent = `${input.name} est vide`;
+        valid = false;
+      } else if (
+        (input.name === 'name' || input.name === 'message') && input.value.trim().length <= 3) {
+        input.nextElementSibling.textContent = `est tres court`;
+        valid = false;
+      } else if (input.name === 'name' &&!/^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/.test(input.value.trim())) {
+        input.nextElementSibling.textContent ="Le nom doit contenir uniquement des lettres (pas de chiffres ni symboles)";
+        valid = false;
+      } else if (
+        input.name === 'email' && !input.value.trim().includes("@gmail.com")) {
+        input.nextElementSibling.textContent =`les forme d'email invalide. il faut utiliser @gmail.com`;
+        valid = false;
+      } else {
+        input.nextElementSibling.textContent = "";
+      }
+    });
+
+    if (valid === true) {
+       HTMLFormElement.prototype.submit.call(form);
+    }
+  }
+</script>
+
+</body>
+</html>

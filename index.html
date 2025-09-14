@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MTBdir</title>
+  <link rel="icon" type="image/png" href="e4b6cf41-07b9-492f-98de-72266f181df5.png">
+   
+</head>
+<style>
+.milieu{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    height: 75px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo{
+    color: white;
+}
+li{
+    float: left;
+    padding: 10px;
+    list-style: none;
+    font-size:x-large;
+}
+
+ul{
+    margin-right: 2em;
+}
+
+li a{
+    text-decoration-line: none;
+    background-color: white;
+     border-radius: 20%;
+    
+}
+nav h1 {
+    margin-left: 2em;
+    font-size: 2,5em;
+}
+nav a:hover{
+    background-color:rgb(144, 133, 200);
+    text-decoration: underline;
+    border-radius: 100%;
+}
+/* menu déroulant  */
+.menu-toggle {
+    font-size: 2em; 
+    color: white;   
+    margin: 15px; 
+}
+
+/*  cachage des liste  */
+nav ul {
+    display: none; 
+    flex-direction:row; 
+    background-color: black; 
+    border-radius: 20%;
+    position: absolute; 
+    right: 90px; 
+}
+
+/* afichage des liste */
+nav ul.show {
+    display: flex; /* يبان */
+}
+
+.milieu{
+    background-image: url(2b51836b-58f7-4e00-b1e8-5140541f1055.png);
+    background-attachment: fixed;
+    background-size: cover;     
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 600px;
+    text-align: center;
+    
+}
+
+.content{
+    justify-content: center;
+    padding-top: 250px;
+    padding-right: 20%;
+    padding-left: 20%;
+    color: white;
+    
+}
+.content p{
+ 
+     background: rgba(255, 255, 255, 0.4); 
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 15px;
+    font-size:x-large;
+}
+</style>
+<body>
+   <section class="accueil">
+     <nav>
+    <h1 id="logo">
+        <img src="m logo.png" alt="MTBdir logo" style="height:40px; vertical-align: middle; margin-right:8px;">
+        MTBdir
+    </h1>
+
+
+
+    <div class="menu-toggle" id="menu-toggle">
+        ☰
+    </div>
+
+
+
+    
+    <ul>
+        <li><a href="index.html">accueil</a></li>
+        <li><a href="shop.html">shop</a></li>
+        <li><a href="contact.html">contact</a></li>
+        <li><a href="àpropos.html">à propos</a></li>
+    </ul>
+</nav>
+
+        <div class="milieu">
+            <div class="content">
+                    <h2>
+                        MTBdir – Roulez, découvrez, partagez
+                    </h2>
+                    <p>
+                        MTBagadir est une plateforme dédiée aux passionnés de VTT, XC et XCO. 
+                        Notre objectif est de vous offrir des informations fiables, des conseils 
+                        techniques, ainsi qu’un large
+                        choix de pièces et équipements pour vivre pleinemen
+                        t votre passion du vélo tout terrain
+                    </p>
+            </div>
+        </div>
+   </section>
+
+   <script>
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.querySelector("nav ul");
+  menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+                                            });
+</script>
+
+
+</body>
+</html>
